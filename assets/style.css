@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,7 +17,7 @@ body:hover {
 }
 
 .welcome-text {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
   margin: auto;
@@ -26,8 +26,7 @@ body:hover {
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid transparent;
-  animation: typing 3s steps(40, end) forwards;
-  animation-delay: 0.3s;
+  animation: typing 12s steps(80, end) forwards ease-in-out;
 }
 
 @keyframes typing {
@@ -54,10 +53,12 @@ nav ul {
   justify-content: center;
   list-style: none;
   padding: 0;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
@@ -155,12 +156,34 @@ footer {
   to { opacity: 1; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .section {
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  .welcome-text {
+    font-size: 1.8rem;
+    padding: 1rem;
+    white-space: normal;
+  }
+
+  .popup {
+    font-size: 0.95rem;
+    padding: 1.2rem;
+  }
+
+  .project {
+    min-height: 250px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 0.8rem;
   }
 }
