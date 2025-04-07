@@ -17,7 +17,7 @@ body:hover {
 }
 
 .welcome-text {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   margin: auto;
@@ -26,7 +26,8 @@ body:hover {
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid transparent;
-  animation: none;
+  animation: typing 1s steps(160, end) forwards;
+  animation-delay: 0.2s;
 }
 
 @keyframes typing {
